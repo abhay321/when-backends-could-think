@@ -1,0 +1,32 @@
+{
+  "name": "when-backends-could-think",
+  "version": "1.0.0",
+  "description": "Production-ready code for the Thinking Backend architecture",
+  "author": "Abhay Kumar Chaudhary <abhaykumarchaudhary3@gmail.com>",
+  "license": "MIT",
+  "keywords": ["backend", "observability", "cognitive-ops", "aws", "llm", "nodejs"],
+  "engines": { "node": ">=18.0.0" },
+  "dependencies": {
+    "@anthropic-ai/sdk":       "^0.20.0",
+    "@aws-sdk/client-bedrock-runtime": "^3.0.0",
+    "@aws-sdk/client-dynamodb": "^3.0.0",
+    "@aws-sdk/client-eventbridge": "^3.0.0",
+    "@aws-sdk/util-dynamodb":  "^3.0.0",
+    "@elastic/elasticsearch":  "^8.0.0",
+    "@opensearch-project/opensearch": "^2.0.0",
+    "@slack/web-api":          "^7.0.0",
+    "axios":                   "^1.6.0",
+    "pg":                      "^8.11.0",
+    "uuid":                    "^9.0.0"
+  },
+  "devDependencies": {
+    "jest":       "^29.0.0",
+    "nodemon":    "^3.0.0"
+  },
+  "scripts": {
+    "test":       "jest",
+    "test:watch": "jest --watch",
+    "lint":       "eslint .",
+    "deploy":     "cd infrastructure && cdk deploy"
+  }
+}
